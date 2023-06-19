@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="openWin('https://www.example.com', 800, 600)">Open Window</button>
+
+
+    <script>
+
+
+        function customDate(date) {
+            var newDate = new Date(date);
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            return (`the day is ${days[newDate.getDay()]} of the week for that date`)
+        }
+
+        // answer 1.a
+        console.log(customDate(2022 - 12 - 12));
+        // answer 1.b
+        let currentDate = new Date();
+        console.log(customDate(currentDate));
+
+
+        //  Answers for 2.a
+        function squareNUmber(numbers) {
+            return newNumbers = numbers.map((number) => {
+                return Math.sqrt(number);
+            })
+        }
+
+        //  Answers for 2.b
+        function squareNUmberSum(squareNumbs) {
+            squareNUmber(squareNumbs);
+            let sum = 0;
+            for (let i = 0; i < newNumbers.length; i++) {
+                sum += newNumbers[i];
+            }
+            return sum;
+
+
+        }
+
+        console.log(squareNUmberSum([9, 16, 25]));
+
+
+        // answer 3.a
+
+        let isPrime = false;
+        function test_prime(num) {
+            if (isNaN(num)){
+                // console.log ("please input a Number!");
+                return false;
+            }
+
+            if (num <= 1) {
+                
+                // console.log ("Not a prime number & number is Negative.");
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    
+                    // console.log ("Not a prime number.");
+                    return false;
+                }
+            }
+            
+            // console.log ("given positive integer is a prime number.");
+            return true;
+        }
+
+         // answer 3.b
+        checkPrimeNumber = 37;
+        let checkNumber = test_prime(checkPrimeNumber);
+
+        if(checkNumber){
+            console.log ("given positive integer is a prime number.");
+        } else if(!checkNumber && checkPrimeNumber <= 0){
+            console.log ("Not a prime number & number is Negative.");
+        } else if(isNaN(checkPrimeNumber)){
+            console.log ("please input a Number!");
+        }
+        
+        else {
+            console.log ("Not a prime number.");
+        }
+        
+        //answer 4
+
+         function openWin(pageurl, width, height) {
+  myWindow = window.open(pageurl,"_blank",`width=${width},height=${height}`);   // Opens a new window
+}
+
+
+    </script>
+</body>
+
+</html>
