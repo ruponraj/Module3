@@ -9,6 +9,11 @@
 
 <body>
 
+    <h2>ANSWER 1</h2>
+    <p id="currentDay"></p>
+
+    <h2>ANSWER 2</h2>
+    <p > the square root of the sum of squares for an array of numbers is <span id="squareRoot"></span></p>
     <button onclick="openWin('https://www.example.com', 800, 600)">Open Window</button>
    <p id="browseINF0"></p>
 
@@ -26,6 +31,7 @@
         console.log(customDate(2022 - 12 - 12));
         // answer 1.b
         let currentDate = new Date();
+        document.getElementById('currentDay').innerHTML = customDate(currentDate);
         console.log(customDate(currentDate));
 
 
@@ -47,8 +53,9 @@
 
 
         }
+        document.getElementById('squareRoot').innerHTML = squareNUmberSum([9, 16, 25])
 
-        console.log(squareNUmberSum([9, 16, 25]));
+        // console.log(squareNUmberSum([9, 16, 25]));
 
 
         // answer 3.a
