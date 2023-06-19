@@ -10,6 +10,7 @@
 <body>
 
     <button onclick="openWin('https://www.example.com', 800, 600)">Open Window</button>
+   <p id="browseINF0"></p>
 
 
     <script>
@@ -98,7 +99,18 @@
   myWindow = window.open(pageurl,"_blank",`width=${width},height=${height}`);   // Opens a new window
 }
 
+//Answer 5
 
+function browserINFO() {
+    let browserName = navigator.appName; 
+    let browserVersion = navigator.appVersion;
+
+    return (`your are using ${browserName} which version is ${browserVersion}.`);
+}
+
+
+
+document.getElementById('browseINF0').innerText = browserINFO();
 
 
     </script>
