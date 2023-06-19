@@ -13,9 +13,16 @@
     <p id="currentDay"></p>
 
     <h2>ANSWER 2</h2>
-    <p > the square root of the sum of squares for an array of numbers is <span id="squareRoot"></span></p>
+    <p> the square root of the sum of squares for an array of numbers is <span id="squareRoot"></span></p>
+
+    <h2>ANSWER 3</h2>
+    <p>Please check console</p>
+
+    <h2>answer 4</h2>
     <button onclick="openWin('https://www.example.com', 800, 600)">Open Window</button>
-   <p id="browseINF0"></p>
+
+    <h2>answer 5</h2>
+    <p id="browseINF0"></p>
 
 
     <script>
@@ -62,62 +69,62 @@
 
         let isPrime = false;
         function test_prime(num) {
-            if (isNaN(num)){
+            if (isNaN(num)) {
                 // console.log ("please input a Number!");
                 return false;
             }
 
             if (num <= 1) {
-                
+
                 // console.log ("Not a prime number & number is Negative.");
                 return false;
             }
             for (let i = 2; i <= Math.sqrt(num); i++) {
                 if (num % i === 0) {
-                    
+
                     // console.log ("Not a prime number.");
                     return false;
                 }
             }
-            
+
             // console.log ("given positive integer is a prime number.");
             return true;
         }
 
-         // answer 3.b
+        // answer 3.b
         checkPrimeNumber = 37;
         let checkNumber = test_prime(checkPrimeNumber);
 
-        if(checkNumber){
-            console.log ("given positive integer is a prime number.");
-        } else if(!checkNumber && checkPrimeNumber <= 0){
-            console.log ("Not a prime number & number is Negative.");
-        } else if(isNaN(checkPrimeNumber)){
-            console.log ("please input a Number!");
+        if (checkNumber) {
+            console.log("given positive integer is a prime number.");
+        } else if (!checkNumber && checkPrimeNumber <= 0) {
+            console.log("Not a prime number & number is Negative.");
+        } else if (isNaN(checkPrimeNumber)) {
+            console.log("please input a Number!");
         }
-        
+
         else {
-            console.log ("Not a prime number.");
+            console.log("Not a prime number.");
         }
-        
+
         //answer 4
 
-         function openWin(pageurl, width, height) {
-  myWindow = window.open(pageurl,"_blank",`width=${width},height=${height}`);   // Opens a new window
-}
+        function openWin(pageurl, width, height) {
+            myWindow = window.open(pageurl, "_blank", `width=${width},height=${height}`);   // Opens a new window
+        }
 
-//Answer 5
+        //Answer 5
 
-function browserINFO() {
-    let browserName = navigator.appName; 
-    let browserVersion = navigator.appVersion;
+        function browserINFO() {
+            let browserName = navigator.appName;
+            let browserVersion = navigator.appVersion;
 
-    return (`your are using ${browserName} which version is ${browserVersion}.`);
-}
+            return (`your are using ${browserName} which version is ${browserVersion}.`);
+        }
 
 
 
-document.getElementById('browseINF0').innerText = browserINFO();
+        document.getElementById('browseINF0').innerText = browserINFO();
 
 
     </script>
