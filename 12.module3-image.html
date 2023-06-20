@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image-item{
+            width: 400px;
+            height: auto;
+        }
+        #image{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="image-item">
+            <img src="img-1.jpg" alt="" id="image">
+        </div>
+        <button>Click to Change</button>
+    </div>
+
+    <script>
+        document.querySelector("button").addEventListener("click", ()=>{
+            console.log("click");
+            document.querySelector("#image").src = "./img-3.jpg"
+        })
+    </script>
+</body>
+</html>

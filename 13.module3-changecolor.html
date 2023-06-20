@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="changeColor">
+        The Red Devils are being heavily linked with 20-year-old Atalanta
+        striker Rasmus Hojlund - but just how good is he?
+      </p>
+      <p class="change" id="color4">
+        Four games into qualifying, and England are all-but assured of their
+        place at Euro 2024 already. The Three Lions have shaken off the
+        disappointment of their World Cup quarter-final exit to make a 100
+        percent start to life in what looked a tricky Group C, with Monday's 7-0
+        spanking of North Macedonia yet another fine performance from Gareth
+        Southgate's men.
+      </p>
+      <p class="changeColor" id="color3">
+        The England boss tends to stick with his favourites, as the likes of
+        Harry Maguire, Mason Mount and Jordan Henderson continue to earn regular
+        minutes despite their inconsistency at club level. That is unlikely to
+        change, but competition for places will only ramp up heading into next
+        year's European Championship in Germany.
+      </p>
+      <p class="change" id="color2">
+        New heroes have already emerged in the form of Bukayo Saka, Jude
+        Bellingham and Phil Foden, while players such as Marcus Rashford and
+        Jack Grealish are now in the prime years of their careers.
+      </p>
+      <p class="changeColor" id="color1">
+        The 21-year-old was also typically dazzling on the left wing against
+        Malta, and despite intense competition for places in those wide forward
+        positions, the Gunners star is now surely one of the first names on the
+        teamsheet for his country.
+      </p>
+      <p class="change" id="color9">
+        the entire world was watching US Secretary of State Antony Blinken's
+        visit to Beijing over the weekend - but perhaps none more so than the
+        countries that would be on the frontlines of any conflict between the US
+        and China.
+      </p>
+    </div>
+
+    <script>
+      function colorChange(className) {
+        let selectPara = document.querySelectorAll(className);
+        Array.from(selectPara).forEach((element) => {
+        
+          element.style.color = "red";
+        });
+      }
+
+      colorChange(".change");
+    </script>
+  </body>
+</html>

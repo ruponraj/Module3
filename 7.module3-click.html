@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click</title>
+
+    <style>
+        #img-container{
+            width: 400px;
+            height: auto;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+  </head>
+
+  <body>
+<div class="container">
+    <div id="img-container">
+        <img src="img-1.jpg" alt="" id="img-change">
+    </div>
+</div>
+
+
+
+    <script>
+      window.addEventListener("click", (e) => {
+        e.preventDefault();
+        let x = e.clientX,
+          y = e.clientY;
+        alert(`X:${x} & Y:${y}`);
+      });
+
+      document.addEventListener("keydown", (e) => {
+        alert(`you pressed: ${e.key}`);
+      });
+
+  document.getElementById("img-change").addEventListener("mouseover",() =>{
+console.log("hover")
+document.getElementById("img-change").src = "./img-3.jpg"
+  })
+ 
+
+    </script>
+  </body>
+</html>
